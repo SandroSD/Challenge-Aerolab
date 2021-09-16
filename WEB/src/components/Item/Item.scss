@@ -1,0 +1,39 @@
+$mainColor: #0070e0;
+
+.item {
+  background-color: #fff;
+  margin: 0.5em;
+  padding: 1em;
+  text-align: center;
+
+  .imagen {
+    max-width: 10em;
+  }
+
+  #price {
+    color: $mainColor;
+    font-weight: bold;
+    margin: 0.5em 0;
+  }
+
+  .cantidad {
+    width: 10em;
+    margin: 0 1em;
+    border-bottom: 1px solid $mainColor;
+  }
+
+  .btn {
+    background-color: $mainColor;
+    width: 40px;
+    text-align: center;
+  }
+
+  .btn-carrito {
+    background-color: #fff;
+    border-color: $mainColor;
+    color: $mainColor;
+    font-size: 0.75em;
+    width: 10em;
+    text-align: center;
+  }
+}

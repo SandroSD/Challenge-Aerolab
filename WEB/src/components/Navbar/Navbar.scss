@@ -1,0 +1,26 @@
+$mainColor: #0070e0;
+
+.header {
+  border-bottom: 1px solid #e2e8f0;
+  color: $mainColor;
+  background-color: #fff;
+
+  .left {
+    margin: 0;
+
+    .brandName {
+      font-size: 1.2em;
+    }
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+
+    .badge {
+      color: $mainColor;
+    }
+  }
+}

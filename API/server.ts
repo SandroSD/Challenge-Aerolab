@@ -2,9 +2,11 @@ import http from "http";
 import express, { Express } from "express";
 import morgan from "morgan";
 import routes from "./src/routes";
+import cors from "cors";
 
 const router: Express = express();
 
+router.use(cors());
 router.use(morgan("dev"));
 router.use(express.urlencoded({ extended: false }));
 router.use(express.json());

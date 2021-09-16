@@ -14,6 +14,7 @@ const getAllService = async () => {
     data.products.forEach((p: any) => {
       const product: Product = new Product();
 
+      product.id = p.id;
       product.name = p.name;
       product.price = p.price;
       product.presentation = p.presentation;
@@ -21,7 +22,9 @@ const getAllService = async () => {
       product.photo = p.photo;
       product.originalPrice = p.originalPrice;
       product.updatedAt = p.updatedAt;
-      product.arsPrice = product.originalPrice * dollarRes.rate;
+      product.arsPrice = Number(
+        (product.originalPrice * dollarRes?.rate).toFixed(2)
+      );
 
       products.push(product);
     });
