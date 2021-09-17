@@ -4,9 +4,9 @@ WEB:
 
     - Si es la primera instalar dependencias con:
 
-        ```bash
-            npm install
-        ```
+```bash
+    npm install
+```
 
     - Agregar la URL de la API en el .env en la siguiente variable:
 
@@ -14,20 +14,20 @@ WEB:
 
     - Para ejecutar usar:
 
-        ```bash
-            npm start
-        ```
+```bash
+    npm start
+```
 
 API:
 
     - Si es la primera instalar dependencias con:
 
-        ```bash
-            npm install
-        ```
+```bash
+    npm install
+```
 
     - Para ejecutar usar:
 
-        ```bash
-            npm run dev
-        ```
+```bash
+    npm run dev
+```
