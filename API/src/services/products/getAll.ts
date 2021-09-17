@@ -5,6 +5,7 @@ import getCotizacion from "../dollar/getCotizacion";
 
 const getAllService = async () => {
   try {
+    console.log("URL: ",`${process.env["BASE_URL"]}/products`);
     const { data } = await axios.get(`${process.env["BASE_URL"]}/products`);
 
     const dollarRes = await getCotizacion();

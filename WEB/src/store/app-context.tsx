@@ -66,7 +66,8 @@ const AppContextProvider: FC = (props) => {
   const calcularTotal = (productos: Product[]): number => {
     let precioTotal: number = 0;
     productos.forEach((p: Product) => {
-      let subTotal = p._cantidad * p._arsPrice;
+      let subTotal: number = 0;
+      subTotal = p._cantidad * p._arsPrice;
       precioTotal += subTotal;
     });
 

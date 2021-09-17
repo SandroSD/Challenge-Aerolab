@@ -4,8 +4,9 @@
   "description": "",
   "main": "server.ts",
   "scripts": {
+    "start": "node dist/server.js",
     "dev": "nodemon server.ts",
-    "build": "rm -rf dist/ && prettier --write server.ts && tsc"
+    "deploy": "tsc && git add . && git commit -m Heroku && git push heroku main"
   },
   "keywords": [],
   "author": "",
@@ -26,5 +27,8 @@
   },
   "devDependencies": {
     "@types/cors": "^2.8.12"
+  },
+  "engines": {
+    "node": "12.18.3"
   }
 }

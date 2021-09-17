@@ -4,6 +4,7 @@ $mainColor: #0070e0;
   border-bottom: 1px solid #e2e8f0;
   color: $mainColor;
   background-color: #fff;
+  margin-bottom: 4em;
 
   .left {
     margin: 0;
@@ -16,8 +17,12 @@ $mainColor: #0070e0;
   .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 1rem 1.5rem;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
 
     .badge {
       color: $mainColor;

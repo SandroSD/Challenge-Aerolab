@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import axios from "axios";
 import { Container, Row, Col } from "reactstrap";
 import Item from "../Item/Item";
@@ -7,20 +7,6 @@ import { AppContext } from "../../store/app-context";
 
 const Body = () => {
   const appCtx = useContext(AppContext);
-
-  const [products, setProducts] = useState<Product[]>([]);
-
-  const addToCarrito = (index: number) => {
-    let newProducts = [...products];
-    newProducts[index]._cantidad += 1;
-    setProducts(newProducts);
-  };
-
-  const removeFromCarrito = (index: number) => {
-    let newProducts = [...products];
-    newProducts[index]._cantidad -= 1;
-    setProducts(newProducts);
-  };
 
   useEffect(() => {
     try {
@@ -45,12 +31,7 @@ const Body = () => {
         {appCtx.items &&
           appCtx.items.map((p, i) => (
             <Col key={i} xs={6} sm={4} xl={3}>
-              <Item
-                product={p}
-                index={i}
-                // addToCarrito={(i) => addToCarrito(i)}
-                // removeFromCarrito={(i) => removeFromCarrito(i)}
-              />
+              <Item product={p} index={i} />
             </Col>
           ))}
       </Row>
